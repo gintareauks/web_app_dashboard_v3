@@ -26,6 +26,123 @@
     </nav>
 
     <main>
+        <div class="main-header"> // row
+            <h2 class="headline">Dashboard</h2>
+            <div class="main-header-search">
+                <input type="search" placeholder="Search..."/>
+            </div>
+        </div>
+
+        <!--alert banner-->
+        <div class="alert" id="alert">
+            <!--JS will insert alert here-->
+        </div>
+
+        <section class="traffic">
+            <div class="traffic-header">
+                <h3>Traffic</h3>
+                <ul class="traffic-nav">
+                    <li class="traffic-nav-link">Hourly</li>
+                    <li class="traffic-nav-link">Daily</li>
+                    <li class="traffic-nav-link">Weekly</li>
+                    <li class="traffic-nav-link">Monthly</li>
+                </ul>
+            </div>
+            <div class="widget-container-full">
+                <!-- element line graph will attach to-->
+                <canvas id="traffic-chart"></canvas>
+            </div>
+        </section>
+
+        <section class="daily">
+            <h3>Daily Traffic</h3>
+            <div class="widget-container-half">
+                <!--element bar graph will attach to-->
+                <canvas id="daily-chart"></canvas>
+            </div>
+        </section>
+
+        <section class="mobile-users">
+            <h3>Mobile Users</h3>
+            <div class="widget-container-half">
+                <!--element bar graph will attach to-->
+                <canvas id="mover-users-chart"></canvas>
+            </div>
+        </section>
+
+       <div class="social-container">
+           <div class="social-image">
+               <!--inline SVG not included for brevity-->
+           </div>
+           <div class="social-text">
+                <p>Twitter</p>
+                <p>10,345</p>
+           </div>
+       </div>
+
+       <div class="social-container">
+            <div class="social-image">
+                <!--inline SVG not included for brevity-->
+            </div>
+            <div class="social-text">
+                <p>Facebook</p>
+                <p>8,739</p>
+            </div>
+        </div>
+
+        <div class="social-container">
+            <div class="social-image">
+                <!--inline SVG not included for brevity-->
+            </div>
+            <div class="social-text">
+                 <p>Google+</p>
+                 <p>2,530</p>
+            </div>
+        </div>
+
+        <section class="members">
+            <h3>New Members</h3>
+
+            <div class="members-container">
+                <img src="images/member-1.jpg" class="profile-image" alt="profile image">
+                <div class="members-text">
+                    <p>Cecilie Hansen</p>
+                    <a href="#">h.cecilie@gmail.com</a>
+                </div>
+                <p>11/03/20</p>
+            </div>
+
+            <div>
+                <img src="images/member-2.jpg" class="profile-image" alt="profile image">>
+                <div class="members-text">
+                    <p>Henry Jensen</p>
+                    <a href="#">jensen88@gmail.com</a>
+                </div>
+                <p>11/05/20</p>
+            </div>
+
+            <div>
+                <img src="images/member-3.jpg" class="profile-image" alt="profile image">>
+                <div class="members-text">
+                    <p>Natalie Quien</p>
+                    <a href="#">nat.quien@yahoo.com</a>
+                </div>
+                <p>11/07/2020</p>
+            </div>
+
+            <div>
+                <img src="images/member-4.jpg" class="profile-image" alt="profile image">>
+                <div class="members-text">
+                    <p>Jamie Fournier</p>
+                    <a href="#">jfournier65@gmail.com</a>
+                </div>
+                <p>11/13/2020</p>
+            </div>
+
+        </section>
+      
+
+
     </main>
 </body>
 </html>
