@@ -1,3 +1,115 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* HEADER */ 
+
+#bell-container {
+    text-align: right;
+}
+
+.bell-icon {
+    max-width: 60%;
+    /* float: right; */
+    align-items: center;
+    margin-top: 50%;
+}
+
+.header h1 {
+    font-size: 6.5vw;
+    font-weight: 300;
+}
+
+.profile-picture {
+    max-width: 90%;
+    border-radius: 50%;
+    justify-self: right;
+    align-self: center;
+    
+}
+
+.header h3 {
+    font-size: 4.3vw;
+    text-align: right;
+    align-items: center;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 2fr 0.7fr 0.3fr 0.8fr 2fr;
+    background-color:  #8585e0;
+    color: white;
+    padding: 10px;
+}
+
+.divider {
+    border-left: 2px solid rgb(86, 87, 137);
+    max-height: 66%;
+    justify-self: right;
+    align-items: center;
+    margin-top: 50%;
+}
+
+/* NAVIGATION */ 
+
+.navigation {
+    background-color: rgb(86, 87, 137);
+    display: grid;
+    grid-template-columns: 40px 40px 40px 40px;
+    justify-content: center;
+    padding: 7px
+}
+
+.navigation img {
+    max-width: 65%;
+}
+
+.navigation a {
+    text-align: center;
+}
+
+
+/* WIDGET CONTAINER */ 
+
+/* dashboard */
+.main-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    margin-bottom: 10px;
+    
+}
+
+.headline {
+    font-size: 5vw;
+    
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* study guide */
 .grid-container {
     display: grid;
     grid-template-columns: 100%;
