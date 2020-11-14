@@ -208,16 +208,28 @@ body {
     text-align: left;
 }
 
-.social-image {
-    align-self: center;
+.image-container {
     grid-area: svg;
-    background-color: green;
-    max-width: 60%;
+    margin: auto;
+}
+
+.social-image {
+    /* grid-area: svg; */
+    max-width: 70px;
+    max-height: 70px;
     border-radius: 50%;
+    background-color: #8585e0;
+    padding: 20px;
 }
 
 .social-logo {
-    fill: #8585e0;
+    fill: white;
+}
+
+.social-image  svg {
+    /* max-width: 60px; */
+    width: 100%;
+    height: auto;
 }
 
 .social-container {
