@@ -7,7 +7,7 @@ alertBanner.innerHTML =
     `
     <div class="alert-banner">
         <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
-        <p class="alert-banner-close">x</p>
+        <strong><p class="alert-banner-close">&#10008;</p></strong>
     </div>
     `
 alertBanner.addEventListener('click', e => {
