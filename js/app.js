@@ -1,8 +1,36 @@
-// ALERT BANNER
+/* ========================================
+                BELL NOTIFICATIONS  
+======================================== */
+const bell = document.getElementsByClassName('bell-icon');
+const dropdown = document.getElementById('dropdown-content');
+const bellIcon = document.querySelector('.bell-icon');
 
+
+// Displays notifications when bell is clicked
+bellIcon.addEventListener('click', () => {
+    if (dropdown.style.display = 'none') {
+        dropdown.style.display = 'block';
+    }
+});
+
+
+// Notifications close when cross is clicked
+dropdown.addEventListener('click', e => {
+    const element = e.target;
+
+    if (element.classList.contains("close")) {
+        dropdown.style.display = 'none';
+}
+});
+
+
+/* ========================================
+                ALERT BANNER 
+======================================== */
 const alertBanner = document.getElementById("alert");
 
-// create the html for the banner 
+
+// Creates html for the banner 
 alertBanner.innerHTML = 
     `
     <div class="alert-banner">
@@ -10,6 +38,9 @@ alertBanner.innerHTML =
         <strong><p class="alert-banner-close">&#10008;</p></strong>
     </div>
     `
+
+
+// Closes alert banner
 alertBanner.addEventListener('click', e => {
     const element = e.target;
     if (element.classList.contains("alert-banner-close")) {
@@ -17,64 +48,59 @@ alertBanner.addEventListener('click', e => {
     }
 });
 
-// CHART WIDGETS 
 
-// line graph
+/* ========================================
+                CHART WIDGETS 
+======================================== */
+// LINE GRAPH
 const trafficCanvas = document.getElementById("traffic-chart");
 
-// let trafficDaily = {
-//     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", 
-// "4-10", "11-17", "18-24", "25-31"],
-//     datasets: [{
-//         data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500],
-//         backgroundColor: 'rgba(116, 119, 191, .3)',
-//         borderWidth: 1,
-//     }]
-// };
 
+// Hourly line chart
+let trafficDataHourly = {
+    labels: ['7am', '10am', '13pm', '16pm', '19pm', '22pm', '1am'],
+    datasets: [{
+        data: [20, 50, 80, 50, 90, 40, 20],
+        backgroundColor: 'rgba(116, 119, 191, .3)',
+        borderWidth: 1,
+    }]
+};
+
+
+// Daily line chart
+let trafficDataDaily = {
+    labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+    datasets: [{
+        data: [100, 250, 450, 200, 500, 450, 300],
+        backgroundColor: 'rgba(116, 119, 191, .3)',
+        borderWidth: 1,
+    }]
+};
+
+
+// Weekly line chart
 let trafficDataWeekly = {
     labels: ['16-32', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
     datasets: [{
         data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500],
-        backgroundColor: '#7477bf',
-        pointBackgroundColor: 'white',
+        backgroundColor: 'rgba(116, 119, 191, .3)',
         borderWidth: 1,
     }]
 };
 
-// Creates the DAILY chart
-let trafficDataDaily = {
-    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-    datasets: [{
-        data: [10, 40, 55, 30, 50, 20, 45, 50, 15],
-        backgroundColor: '#7477bf',
-        pointBackgroundColor: 'white',
-        borderWidth: 1,
-    }]
-};
 
-// Creates the HOURLY chart
-let trafficDataHourly = {
-    labels: ['13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
-    datasets: [{
-        data: [100, 450, 250, 200, 600, 150, 500, 300, 250, 550, 700, 400],
-        backgroundColor: '#7477bf',
-        pointBackgroundColor: 'white',
-        borderWidth: 1,
-    }]
-};
-
-// Creates the MONTHLY chart
+// Monthly line chart
 let trafficDataMonthly = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     datasets: [{
-        data: [50, 30, 35, 65, 80, 40, 70, 30, 25, 55, 70, 40, 50, 90],
-        backgroundColor: '#7477bf',
-        pointBackgroundColor: 'white',
+        data: [100, 400, 300, 500, 400, 300, 250, 350, 400, 500, 300, 250, 400, 500],
+        backgroundColor: 'rgba(116, 119, 191, .3)',
         borderWidth: 1,
     }]
 };
 
+
+// Sets the options
 let trafficOptions = {
     aspectRatio: 2.5, 
     animation: {
@@ -92,6 +118,8 @@ let trafficOptions = {
     }
 };
 
+
+// Creates the chart itself
 function createChart(data) {
 let trafficChart = new Chart(trafficCanvas, {
     type: 'line',
@@ -100,9 +128,50 @@ let trafficChart = new Chart(trafficCanvas, {
 });
 }
 
-// bar graph 
+
+// LINE CHART CHANGE
+let hourly = document.getElementById('hourly');
+let daily = document.getElementById('daily');
+let weekly = document.getElementById('weekly');
+let monthly = document.getElementById('monthly');
+const trafficNav = document.querySelector('.traffic-nav');
+
+
+// Chart changes as different option is chosen
+trafficNav.addEventListener('click', (e) => {
+    // Adds special CSS to nav option chosen
+    function chartSwitch(li, chartName) {
+        if (e.target == li) {
+            createChart(chartName);
+            li.classList.add('active');
+        } else {
+            li.classList.remove('active');
+        }
+    }
+    
+    // Hourly chart called
+    chartSwitch(hourly, trafficDataHourly);
+    // Daily chart called
+    chartSwitch(daily, trafficDataDaily);
+    // Weekly chart called
+    chartSwitch(weekly, trafficDataWeekly);
+    // Monthly chart called
+    chartSwitch(monthly, trafficDataMonthly);
+});
+
+
+// Weekly chart is shown when page is loaded
+document.addEventListener('DOMContentLoaded', (event) => {
+    createChart(trafficDataWeekly);
+    weekly.classList.add('active');
+});
+
+
+// BAR GRAPH 
 const dailyCanvas = document.getElementById("daily-chart");
-// data for daily traffic bar chart
+
+
+// Daily traffic bar chart
 const dailyData = {
     labels: ["S", "M", "T", "W", "T", "F", "S"], 
     datasets: [{
@@ -113,6 +182,8 @@ const dailyData = {
     }]
 };
 
+
+// Sets the options
 const dailyOptions = {
     scales: {
         yAxes : [{
@@ -126,15 +197,20 @@ const dailyOptions = {
     }
 }
 
+
+// Creates the chart itself
 let dailyChart = new Chart(dailyCanvas, {
     type: 'bar', 
     data: dailyData,
     options: dailyOptions
 });
 
-// doughnut chart
+
+// DOUGHNUT CHART
 const mobileCanvas = document.getElementById("mobile-chart");
 
+
+// Daily traffic bar chart
 const mobileData = {
     labels: ["Desktop", "Tablet", "Phones"], 
     datasets: [{
@@ -149,6 +225,8 @@ const mobileData = {
     }]
 };
 
+
+// Sets the options
 const mobileOptions = {
     legend: {
         position: 'right',
@@ -159,19 +237,24 @@ const mobileOptions = {
     }
 };
 
+
+// Creates the chart itself
 let mobileChart = new Chart(mobileCanvas, {
     type: 'doughnut', 
     data: mobileData,
     options: mobileOptions
 });
 
-// MESSAGING SECTION
+
+/* ========================================
+                MESSAGE  
+======================================== */
 const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
 const send = document.getElementById("send");
 
-send.addEventListener('click', () => {
 
+send.addEventListener('click', () => {
     // ensure user and message fields are filled out
     if (user.value === "" && message.value === "") {
         alert("Please fill out user and message fields before sending");
@@ -184,68 +267,6 @@ send.addEventListener('click', () => {
     }
 });
 
-// Bell Notifications
-
-const bell = document.getElementsByClassName('bell-icon');
-const dropdown = document.getElementById('dropdown-content');
-const bellIcon = document.querySelector('.bell-icon');
-
-bellIcon.addEventListener('click', () => {
-    if (dropdown.style.display = 'none') {
-        dropdown.style.display = 'block';
-    }
-});
-
-dropdown.addEventListener('click', e => {
-    const element = e.target;
-
-    if (element.classList.contains("close")) {
-        dropdown.style.display = 'none';
-}
-});
-
-
-// Traffic Chart Change
-
-let hourly = document.getElementById('hourly');
-let daily = document.getElementById('daily');
-let weekly = document.getElementById('weekly');
-let monthly = document.getElementById('monthly');
-
-const trafficNav = document.querySelector('.traffic-nav');
-
-// trafficNav.addEventListener('click', e => {
-
-// })
-
-// Adds event listener to traffic nav and changes chart accordingly
-trafficNav.addEventListener('click', (e) => {
-    // Creates a function to toggle display chart and 'active' class name depending on li element clicked
-    function toggleChart(listName, chartName) {
-        if (e.target == listName) {
-            createChart(chartName);
-            listName.classList.add('active');
-        } else if (e.target !== listName) {
-            listName.classList.remove('active');
-        }
-    }
-    
-    // Hourly chart
-    toggleChart(hourly, trafficDataHourly);
-    // Daily chart
-    toggleChart(daily, trafficDataDaily);
-    // Weekly chart
-    toggleChart(weekly, trafficDataWeekly);
-    // Monthly chart
-    toggleChart(monthly, trafficDataMonthly);
-});
-
-// Loads the weekly chart on page load
-document.addEventListener('DOMContentLoaded', () => {
-    createChart(trafficDataWeekly);
-    weekly.classList.add('active');
-});
-
 
 /* ========================================
         LOCAL STORAGE FOR SETTINGS 
@@ -255,6 +276,7 @@ const cancelBtn = document.getElementById('cancel');
 const email = document.getElementById('email');
 const profile = document.getElementById('profile');
 const select = document.getElementById('timezone');
+
 
 // Create const for saved values
 const emailPref = localStorage.getItem('emailPref');
@@ -298,6 +320,7 @@ if (testStorage() === true) {
         alert('Settings successfully saved!');
     });
 
+
     // Sets settings to deafult when cancel is clicked
     cancelBtn.addEventListener('click', () => {
         const cancel = confirm('Are you sure you want to cancel changes?');
@@ -310,9 +333,8 @@ if (testStorage() === true) {
     loadSettings();
 }
 
+
 // Loads saved settings
 window.addEventListener('DOMContentLoaded', (event) => {
     loadSettings();
 });
-
-
