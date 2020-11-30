@@ -39,7 +39,7 @@ alertBanner.innerHTML =
     </div>
     `
 
-
+    
 // Closes alert banner
 alertBanner.addEventListener('click', e => {
     const element = e.target;

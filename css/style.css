@@ -108,6 +108,46 @@ body {
     align-self: center;
 }
 
+@keyframes bell-icon {
+    0% {
+        transform: rotate(5deg);
+    }
+    10% {
+        transform: rotate(10deg);
+    }
+    20% {
+        transform: rotate(15deg);
+    }
+    30% {
+        transform: rotate(25deg);
+    }
+    40% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    60% {
+        transform: rotate(-5deg);
+    }
+    70% {
+        transform: rotate(-10deg);
+    }
+    80% {
+        transform: rotate(-15deg);
+    }
+    90% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(-5deg);
+    }
+  }
+
+.bell-icon:hover {
+    animation: bell-icon 0.8s;
+}
+
 #notifications {
    width: 6px;
    height: 6px;
@@ -118,26 +158,22 @@ body {
    right: 168px;
 }
 
-#bell-container:hover {
-    transition: transform .4s ease-out;
-}
-
-.bell-icon:hover {
-    transform: rotate(45deg);
-}
-
   /* Dropdown Content (Hidden by Default) */
+
 #dropdown-content {
     position: relative;
     /* display: inline-block; */
     display: none;
     position: absolute;
     top: 60px;
-    right: 40px;
-    /* left: 40px; */
+    right: 10px;
+    left: 10px;
     background-color: greenyellow;
+    opacity: 0.9;
     min-width: 200px;
-    max-width: 350px;
+    max-width: 400px;
+    border-radius: 5px;
+    /* margin-left: 100px; */
   }
 
   #dropdown-content ul {
@@ -197,6 +233,12 @@ body {
     top: 15px;
     right: 173px;
  }
+}
+
+@media(min-width: 768px) {
+ #dropdown-content {
+    margin-left: auto;
+  }
 }
 
 /* NAVIGATION */ 
@@ -349,7 +391,8 @@ body {
     list-style-type: none;
     justify-self: right;
     align-self: center;
-    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 5px;
 }
 
 #traffic-chart {
@@ -357,7 +400,8 @@ body {
 }
 
 .traffic-nav-link {
-    padding-right: 10px;
+    padding-right: 5px;
+    padding-left: 0px;
 }
   
 li {
@@ -385,10 +429,9 @@ li a {
     background-color: #8FBC8F;
     color: white;
     border-radius: 20px;
-    padding: 7px;
-    min-width: 60px;
+    padding: 5px;
+    width: 60px;
     text-align: center;
-
 }
 
 @media (min-width: 768px) {
@@ -540,7 +583,7 @@ li a {
     max-height: 30px;
     border-radius: 50%;
     background-color: #8585e0;
-    padding: 20px;
+    padding: 25px;
 }
 
 .social-logo {
@@ -563,6 +606,7 @@ li a {
     font-size: 2.5em;
     color: #737373;
     margin-top: 0;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 @media(min-width: 768px) {
@@ -796,6 +840,10 @@ li a {
 }
 
 @media(min-width: 768px) {
+   .widget-container {
+       padding-right: 0px;
+   }
+
     .message h3 {
         font-size: 1em;
         padding-left: 30px;
@@ -886,6 +934,10 @@ select {
 }
 
 @media(min-width: 768px) {
+    .container-settings {
+        padding-left: 20px;
+    }
+    
     .settings h3 {
         font-size: 1em;
         padding-left: 30px;
