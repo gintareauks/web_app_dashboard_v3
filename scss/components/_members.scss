@@ -1,0 +1,75 @@
+ /* ========================================
+            Members - Activity
+======================================== */
+.members {
+    border-right: 1px solid $color-border !important;
+    border-bottom: 1px solid $color-border !important;
+}
+
+.activity {
+    border-bottom: 1px solid $color-border;
+    &-text {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.members-container,
+.activity-container {
+    max-width: 95%;
+    margin: auto;
+}
+
+.members h3,
+.activity h3 {
+    padding: 10px 0px 0px 10px;
+    margin-bottom: 0;
+ } 
+
+.profile-image {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+
+.members-container,
+.activity-container {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px $color-border;
+  height: 110px;
+  &:last-child {
+    border: none; 
+  }
+}
+
+.members-text,
+.activity-text {
+    padding-left: 10px;
+    & p {
+        margin-bottom: 5px;
+        margin-top: 0px;
+    }
+ }
+
+.date,
+.arrow {
+  margin-left: auto;
+  padding-right: 10px;
+}
+
+@media(min-width: $tablet) {
+    .members h3, 
+    .activity h3 {
+        padding-left: 30px;
+}
+}
+
+@media(min-width: $laptop) {
+  .members-container,
+  .activity-container {
+      padding: 0 10px;
+      max-width: 90%;
+  }
+}

@@ -1,0 +1,111 @@
+/* SETTINGS */ 
+
+.settings {
+    & h3 {
+        padding: 10px 0px 0px 10px;
+        margin-bottom: 0;
+    }
+    & strong {
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    & label {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        padding: 10px 0px 0px 10px;
+    }
+}
+
+.switch {
+   max-width: 90%;
+   margin-top: 5px;
+   margin-right: auto;
+   margin-right: 10px;
+   &-light {
+        margin-bottom: 20px;
+   }
+}
+
+.timezone-container {
+    text-align: center;
+
+}
+select {
+    width: 94%;
+    margin-top: 30px;
+}
+
+#timezone {
+    height: 30px;
+    margin-top: 10px;
+}
+
+.setting-button {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "save cancel";
+    margin-top: 10px;
+    justify-items: center;
+    margin: 17px 0px 40px;
+}
+
+#save {
+    grid-area: save;
+    margin-top: 0;
+    width: 90%;
+}
+
+#cancel {
+    grid-area: cancel;
+    height: 30px;
+    width: 90%;
+    border: none;
+    color: white;
+    background-color: #cccccc;
+    border-radius: 3px;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        outline: none;
+        box-shadow: 0 0 5px grey;
+  }
+}
+  
+@media (min-width: 768px) {
+    .container-settings {
+        padding-left: 20px;
+        max-width: 95%;
+    }
+    
+    .settings h3 {
+        padding-left: 30px;
+    }
+
+    #timezone {
+        margin-bottom: 0px;
+        max-width: 100%;
+    }
+
+    .setting-button {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: $laptop) {
+    .settings label {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr;
+        padding: 10px 0px 0px 10px;
+    } 
+
+    .switch {
+        max-width: 30%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .settings label {
+        grid-template-columns: 0.9fr 2fr;
+    }
+}

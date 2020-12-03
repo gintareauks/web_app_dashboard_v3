@@ -1,0 +1,128 @@
+ /* ========================================
+                    Header  
+======================================== */
+.header {
+    background-color: $color-theme-primary;
+    display: flex;
+    padding: 5px 10px;
+    height: 50px;
+    & h1,
+    & h3 {
+        display: inline-block;
+        margin: 0;
+        align-self: center;
+    }
+}
+
+#bell-container,
+.divider,
+.profile-picture {
+    display: inline-block;
+}
+
+#bell-container {
+    width: 20px;
+    margin-left: auto;
+    padding-right: 5px;
+    align-self: center;
+}
+
+@keyframes bell-icon {
+    10% {
+        transform: rotate(10deg);
+    }
+    30% {
+        transform: rotate(25deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    70% {
+        transform: rotate(-10deg);
+    }
+    90% {
+        transform: rotate(-25deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+.bell-icon:hover {
+    animation: bell-icon 0.8s;
+}
+
+#notifications {
+   width: 6px;
+   height: 6px;
+   border-radius: 50%; 
+   position: absolute;
+   top: 15px;
+   right: 168px;
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    left: 10px;
+    opacity: 0.9;
+    min-width: 200px;
+    max-width: 400px;
+    border-radius: 5px;
+    & ul {
+        padding-right: 0;
+        padding-left: 10px;
+        margin-top: 0;
+    }
+    & ul li {
+        padding: 0 
+    }
+    & p {
+        margin: 0; 
+    }
+  }
+
+#notifications,
+#dropdown-content {
+    background-color: $color-notifications;
+}
+
+p.close {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.divider {
+    border-left: 2px solid $color-nav;
+    max-height: 75%;
+    margin-top: 5px;
+    padding-right: 5px;
+}
+
+.profile-picture {
+    max-width: 38px;
+    max-height: 38px;
+    border-radius: 50%;
+    align-self: center;
+    margin-right: 5px;
+}
+
+
+@media(min-width: 375px) {
+    #bell-container {
+        padding-right: 10px;
+    }
+
+    #notifications {
+        right: 173px;
+    }
+}
+
+@media(min-width: $tablet) {
+    #dropdown-content {
+        margin-left: auto;
+    }
+}
+

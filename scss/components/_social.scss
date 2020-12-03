@@ -1,0 +1,88 @@
+ /* ========================================
+                Social Stats  
+======================================== */
+.social {
+    border-bottom: 1px solid $color-placeholder;
+    padding-bottom: 20px;
+    & h3 {
+        padding: 10px 0px 0px 10px;
+        margin-bottom: 10px;
+    }
+    &-container {
+        display: flex;
+        text-align: center;
+        background-color: $color-form;
+        border: 1px solid $color-placeholder;
+        border-radius: 3px;
+        margin: 17px auto 0px;
+        max-width: 80%;
+        max-height: 100px;
+    }
+    &-image {
+        max-width: 30px;
+        max-height: 30px;
+        border-radius: 50%;
+        background-color: $color-theme-primary;
+        padding: 25px;
+        width: 50px;
+        height: 50px;
+    }
+    &-logo {
+        fill: $color-text-secondary;
+    }
+    &-name {
+        margin-bottom: 0;
+        text-align: left;
+    }
+    &-number {
+        margin-top: 0;
+    }
+}
+
+.image-container {
+    align-self: center;
+    padding-left: 40px;
+    padding-right: 10px;
+}
+
+
+@media(min-width: $tablet) {
+    .social {
+        & h3 {
+            padding-left: 30px;
+            padding-bottom: 10px;
+        }
+        &-container {
+            width: 30%;
+            height: auto;
+            margin: 0;
+            &-wrap {
+                display: flex;
+            justify-content: space-around;
+            }
+        }
+        &-image {
+            padding: 40%;
+        }
+        &-text {
+            padding-left: 30px;
+            margin-right: 0;
+        } 
+    }
+
+      .image-container {
+        padding-left: 10px;
+      }
+
+}
+
+@media(min-width: $laptop) {
+    .social {
+        &-container {
+            justify-content: center;
+        }
+        &-text {
+            padding-right: 50px;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+ /* ========================================
+                Navigation  
+======================================== */
+.navigation {
+    background-color: $color-nav;
+    display: grid;
+    grid-template-columns: repeat(4, 40px);
+    justify-content: center;
+    padding: 7px;
+    & img {
+        max-width: 65%;
+    }
+    & a {
+        text-align: center;
+    }
+}
+
+@media(min-width: $tablet) {
+    .navigation {
+        width: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        & img {
+            max-width: 45%;
+            padding: 25px 0px; 
+        }
+    }
+}

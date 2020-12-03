@@ -1,0 +1,115 @@
+ /* ========================================
+                Typography
+======================================== */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: $color-text-primary;
+}
+
+.header {
+    & h1 {
+    font-size: 1.4em;
+    font-weight: 300;
+    color: $color-text-secondary;
+    }
+    & h1 span {
+        font-weight: 700;
+    }
+    & h3 {
+        font-size: 0.9em;
+        color: $color-text-secondary;
+    }
+}
+
+.alert-banner,
+li a,
+.active,
+.button-primary,
+#cancel {
+    color: $color-text-secondary;
+}
+
+.social-name,
+.members-text a,
+.arrow {
+    color: $color-theme-primary;
+}
+
+.main-header input::placeholder,
+.form-field::placeholder {
+    color: $color-placeholder;
+}
+
+#timezone {
+    color: $color-text-primary;
+}
+
+.headline {
+    font-size: 1.1em; 
+    font-weight: 300;
+    @media (min-width: $tablet) {
+        font-size: 1.5em; 
+        padding-left: 30px;
+    }
+}
+
+li {
+    font-size: 0.8em;
+    font-weight: 600;
+    & a {
+        text-decoration: none;
+    }
+    @media(min-width: $tablet) {
+    font-size: 0.9em; 
+    }
+}
+
+.daily h3,
+.mobile h3,
+.social h3,
+.members h3,
+.activity h3,
+.traffic-header h3,
+.message h3,
+.settings h3 {
+    font-size: 0.95em;
+    font-weight: 300;
+    @media (min-width: $tablet) {
+        font-size: 1em;
+    }
+}
+
+.social {
+    &-name {
+        font-size: 1em;
+        font-weight: 600;
+    }
+    &-number {
+        font-size: 2.5em;
+        font-family: 'Roboto Condensed', sans-serif;
+        @media (min-width: $tablet) {
+            font-size: 2em;
+        }
+    }
+}
+
+.members-text,
+.activity-text,
+.date {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.settings strong {
+    font-size: 1em;
+}
+
+
+.members-text a {
+    text-decoration: none;
+}
+
+#cancel {
+    background-color: $color-cancel;
+}
+

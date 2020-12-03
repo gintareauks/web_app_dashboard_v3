@@ -1,0 +1,27 @@
+/* ========================================
+                    Alert  
+======================================== */
+.alert-banner {
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    background-color: $color-theme-primary;
+    border-radius: 5px;
+    margin: 0 10px;
+    padding-left: 8px; 
+    &-close {
+        text-align: right;
+        padding-right: 10px;
+    }
+}
+
+@media (min-width: $tablet) {
+    .aler-banner {
+    max-width: 100%;
+    padding-left: 15px;
+    margin: 0px 28px 0px 30px;
+    &-close {
+        text-align: right;
+        padding-right: 15px;
+        }
+    }
+}

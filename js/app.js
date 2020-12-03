@@ -149,13 +149,13 @@ trafficNav.addEventListener('click', (e) => {
         }
     }
     
-    // Hourly chart called
+    // Hourly chart is called
     chartSwitch(hourly, trafficDataHourly);
-    // Daily chart called
+    // Daily chart is called
     chartSwitch(daily, trafficDataDaily);
-    // Weekly chart called
+    // Weekly chart is called
     chartSwitch(weekly, trafficDataWeekly);
-    // Monthly chart called
+    // Monthly chart is called
     chartSwitch(monthly, trafficDataMonthly);
 });
 

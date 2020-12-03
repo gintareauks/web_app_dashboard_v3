@@ -1,0 +1,86 @@
+ /* ========================================
+        Grid Layout (mobile first 320px)  
+======================================== */
+ body {
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: "header" 
+                         "navigation" 
+                         "main";
+}
+
+.header {
+    grid-area: header;
+}
+
+.navigation {
+    grid-area: navigation;
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+}
+
+.widget-container-full, 
+.widget-container-half {
+    width: 95vw;
+}
+
+@media (min-width: $tablet) {
+    .grid-container {
+        grid-template-columns: 85px 1fr;
+        grid-template-areas: 
+            "header header"
+            "navigation main";
+    }
+
+    .main {
+        grid-template-columns: 50%;
+        &-header {
+            grid-column: 1 / span 2;
+            max-width: 100%;
+        }
+    }
+
+    .alert {
+        grid-column: 1 / span 2;
+    }
+
+    .traffic, 
+    .social {
+        grid-column: 1 / span 2;
+    }
+
+    .daily, 
+    .members, 
+    .message {
+        grid-column: 1 / span 1;
+    }
+
+    .mobile, 
+    .activity, 
+    .settings {
+        grid-column: 2 / span 1;
+    }
+
+    .widget-container-full {
+        width: 85vw;
+    }
+
+    .widget-container-half {
+        width: 40vw;
+    }
+
+    .container {
+        width: 100%;
+        grid-column: 1 / span 2;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
