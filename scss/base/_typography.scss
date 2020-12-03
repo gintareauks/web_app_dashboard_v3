@@ -21,16 +21,14 @@ body {
     }
 }
 
+.headline {
+    font-size: 1.1em; 
+    font-weight: 300;
+}
+
 .alert-banner {
     font-size: 0.8em;
 }
-
-@media (min-width: $tablet) {
-    .alert-banner {
-        font-size: 0.9em;
-    }
-}
-
 
 .alert-banner,
 li a,
@@ -51,27 +49,11 @@ li a,
     color: $color-placeholder;
 }
 
-#timezone {
-    color: $color-text-primary;
-}
-
-.headline {
-    font-size: 1.1em; 
-    font-weight: 300;
-    @media (min-width: $tablet) {
-        font-size: 1.3em; 
-        padding-left: 30px;
-    }
-}
-
 li {
     font-size: 0.8em;
     font-weight: 600;
     & a {
         text-decoration: none;
-    }
-    @media(min-width: $tablet) {
-    font-size: 0.9em; 
     }
 }
 
@@ -85,9 +67,6 @@ li {
 .settings h3 {
     font-size: 0.95em;
     font-weight: 300;
-    @media (min-width: $tablet) {
-        font-size: 1em;
-    }
 }
 
 .social {
@@ -98,9 +77,6 @@ li {
     &-number {
         font-size: 2.5em;
         font-family: 'Roboto Condensed', sans-serif;
-        @media (min-width: $tablet) {
-            font-size: 2em;
-        }
     }
 }
 
@@ -111,16 +87,49 @@ li {
     font-weight: 300;
 }
 
-.settings strong {
-    font-size: 0.9em;
-}
-
-
 .members-text a {
     text-decoration: none;
+}
+
+#timezone {
+    color: $color-text-primary;
+}
+
+.settings strong {
+    font-size: 0.9em;
 }
 
 #cancel {
     background-color: $color-cancel;
 }
 
+
+@media (min-width: $tablet) {
+    .headline {
+        font-size: 1.3em; 
+        padding-left: 30px;
+    }
+
+    .alert-banner {
+        font-size: 0.9em;
+    }
+
+    li {
+        font-size: 0.9em; 
+    }
+
+    .daily h3,
+    .mobile h3,
+    .social h3,
+    .members h3,
+    .activity h3,
+    .traffic-header h3,
+    .message h3,
+    .settings h3 {
+        font-size: 1em;
+    }
+
+    .social-nuber {
+        font-size: 2em;
+    }
+}

@@ -27,14 +27,13 @@ body {
   color: white;
 }
 
-.alert-banner {
-  font-size: 0.8em;
+.headline {
+  font-size: 1.1em;
+  font-weight: 300;
 }
 
-@media (min-width: 768px) {
-  .alert-banner {
-    font-size: 0.9em;
-  }
+.alert-banner {
+  font-size: 0.8em;
 }
 
 .alert-banner,
@@ -56,22 +55,6 @@ li a,
   color: #d9d9d9;
 }
 
-#timezone {
-  color: #737373;
-}
-
-.headline {
-  font-size: 1.1em;
-  font-weight: 300;
-}
-
-@media (min-width: 768px) {
-  .headline {
-    font-size: 1.3em;
-    padding-left: 30px;
-  }
-}
-
 li {
   font-size: 0.8em;
   font-weight: 600;
@@ -79,12 +62,6 @@ li {
 
 li a {
   text-decoration: none;
-}
-
-@media (min-width: 768px) {
-  li {
-    font-size: 0.9em;
-  }
 }
 
 .daily h3,
@@ -99,19 +76,6 @@ li a {
   font-weight: 300;
 }
 
-@media (min-width: 768px) {
-  .daily h3,
-  .mobile h3,
-  .social h3,
-  .members h3,
-  .activity h3,
-  .traffic-header h3,
-  .message h3,
-  .settings h3 {
-    font-size: 1em;
-  }
-}
-
 .social-name {
   font-size: 1em;
   font-weight: 600;
@@ -122,12 +86,6 @@ li a {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-@media (min-width: 768px) {
-  .social-number {
-    font-size: 2em;
-  }
-}
-
 .members-text,
 .activity-text,
 .date {
@@ -135,16 +93,46 @@ li a {
   font-weight: 300;
 }
 
-.settings strong {
-  font-size: 0.9em;
-}
-
 .members-text a {
   text-decoration: none;
 }
 
+#timezone {
+  color: #737373;
+}
+
+.settings strong {
+  font-size: 0.9em;
+}
+
 #cancel {
   background-color: #cccccc;
+}
+
+@media (min-width: 768px) {
+  .headline {
+    font-size: 1.3em;
+    padding-left: 30px;
+  }
+  .alert-banner {
+    font-size: 0.9em;
+  }
+  li {
+    font-size: 0.9em;
+  }
+  .daily h3,
+  .mobile h3,
+  .social h3,
+  .members h3,
+  .activity h3,
+  .traffic-header h3,
+  .message h3,
+  .settings h3 {
+    font-size: 1em;
+  }
+  .social-nuber {
+    font-size: 2em;
+  }
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
