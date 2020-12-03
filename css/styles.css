@@ -27,6 +27,16 @@ body {
   color: white;
 }
 
+.alert-banner {
+  font-size: 0.8em;
+}
+
+@media (min-width: 768px) {
+  .alert-banner {
+    font-size: 0.9em;
+  }
+}
+
 .alert-banner,
 li a,
 .active,
@@ -57,7 +67,7 @@ li a,
 
 @media (min-width: 768px) {
   .headline {
-    font-size: 1.5em;
+    font-size: 1.3em;
     padding-left: 30px;
   }
 }
@@ -126,7 +136,7 @@ li a {
 }
 
 .settings strong {
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
 .members-text a {
@@ -748,7 +758,7 @@ p.close {
   background-image: url(https://cdn2.hubspot.net/hubfs/4004166/bioticresearch_website_assets/images/search_icon.png);
   background-repeat: no-repeat;
   background-position: right;
-  background-size: 15%;
+  background-size: 20px;
   padding-left: 10px;
 }
 
@@ -782,12 +792,12 @@ p.close {
 }
 
 @media (min-width: 768px) {
-  .aler-banner {
+  .alert-banner {
     max-width: 100%;
     padding-left: 15px;
     margin: 0px 28px 0px 30px;
   }
-  .aler-banner-close {
+  .alert-banner-close {
     text-align: right;
     padding-right: 15px;
   }

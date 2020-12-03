@@ -1,4 +1,4 @@
- /* ========================================
+/* ========================================
                 Typography
 ======================================== */
 body {
@@ -20,6 +20,17 @@ body {
         color: $color-text-secondary;
     }
 }
+
+.alert-banner {
+    font-size: 0.8em;
+}
+
+@media (min-width: $tablet) {
+    .alert-banner {
+        font-size: 0.9em;
+    }
+}
+
 
 .alert-banner,
 li a,
@@ -48,7 +59,7 @@ li a,
     font-size: 1.1em; 
     font-weight: 300;
     @media (min-width: $tablet) {
-        font-size: 1.5em; 
+        font-size: 1.3em; 
         padding-left: 30px;
     }
 }
@@ -101,7 +112,7 @@ li {
 }
 
 .settings strong {
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 
