@@ -4,14 +4,11 @@
 <head>
     <title>Web App Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/styles.css">
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">  -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="css/toggle-switch.css"/>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">  
 </head>
 
 <body class="grid-container">
@@ -19,19 +16,20 @@
         <h1><span>Your</span>App&trade;</h1>
         <div id="bell-container">
             <img src="icons/icon-bell.svg" class="bell-icon" alt="bell icon">
-            <div id="notifications"></div>
+            <div id="notifications">
+            </div>
         </div>
         <div id="dropdown">
             <div id="dropdown-content">
-            <p class="close">&#10008;</p></li>
-            <ul>
-                <li><p><strong>24/11</strong> - Please verify your phone number !</p>
-                <br>
-                <li><p><strong>23/11</strong> - You have 1 unread message on Facebook</p>
-            </ul>
+                <p class="close">&#10008;</p>
+                <ul>
+                    <li><p><strong>24/11</strong> - Please verify your phone number !</p></li>
+                    <li><p><strong>23/11</strong> - You have 1 unread message on Facebook</p></li>
+                </ul>
             </div>
         </div>
-        <div class="divider"></div>
+        <div class="divider">
+        </div>
         <img src="images/member-1.jpg" class="profile-picture" alt="profile picture">
         <h3>Cecilie Hansen</h3>
     </header>
@@ -63,7 +61,6 @@
         </div>
 
         <div class="container">
-
             <!-- alert banner -->
             <div class="alert" id="alert">
                 <!--JS will insert alert here-->
@@ -244,7 +241,7 @@
                 <h3>MESSAGE USER</h3>
 
                 <form autocomplete="off" action="index.html" class="widget-container">
-                    <input type="text" placeholder="Search for User" class="form-field autocomplete" id="userField" name="members" list="membersField"></input>
+                    <input type="text" placeholder="Search for User" class="form-field autocomplete" id="userField" name="members" list="membersField">
                     <datalist id="membersField">
                       <option>Cecilie Hansen</option>
                       <option>Henry Jensen</option>
@@ -261,44 +258,44 @@
             <section class="settings" id="settings">
                 <h3>SETTINGS</h3>
                 <div class="container-settings">
-                <label class="switch-light switch-ios"onclick="">
-                    <input type="checkbox" id="email">
-                    <strong>
-                        Send Email Notifications
-                    </strong>
-                    <span class="switch">
-                        <span>OFF</span>
-                        <span>ON</span>
-                        <a></a>
-                    </span>
-                </label>
+                    <label class="switch-light switch-ios" onclick="">
+                        <input type="checkbox" id="email">
+                        <strong>
+                            Send Email Notifications
+                        </strong>
+                        <span class="switch">
+                            <span>OFF</span>
+                            <span>ON</span>
+                            <a></a>
+                        </span>
+                    </label>
 
-                <label class="switch-light switch-ios" onclick="">
-                    <input type="checkbox" id="profile">
-                    <strong>
-                        Set Profile to Public
-                    </strong>
-                    <span class="switch">
-                        <span>OFF</span>
-                        <span>ON</span>
-                        <a></a>
-                    </span>
-                </label>
+                    <label class="switch-light switch-ios" onclick="">
+                        <input type="checkbox" id="profile">
+                        <strong>
+                            Set Profile to Public
+                        </strong>
+                        <span class="switch">
+                            <span>OFF</span>
+                            <span>ON</span>
+                            <a></a>
+                        </span>
+                    </label>
 
-                <!-- <div class="container-settings"> -->
-                <div class="timezone-container">
-                <select class="form-field selectTimezone" id="timezone">
-                    <option disabled selected>Select a Timezone</option>
-                    <option>GMT</option>
-                    <option>CST</option>
-                    <option>EST</option>
-                </select>
+                    <!-- <div class="container-settings"> -->
+                    <div class="timezone-container">
+                        <select class="form-field selectTimezone" id="timezone">
+                            <option disabled selected>Select a Timezone</option>
+                            <option>GMT</option>
+                            <option>CST</option>
+                            <option>EST</option>
+                        </select>
+                    </div>
+                    <div class="setting-button">
+                        <button class="button-primary" id="save">SAVE</button>
+                        <button class="button-disabled" id="cancel">CANCEL</button>
+                    </div>
                 </div>
-                <div class="setting-button">
-                    <button class="button-primary" id="save">SAVE</button>
-                    <button class="button-disabled" id="cancel">CANCEL</button>
-                </div>
-            </div>
             </section>
         </div>   
     </main>
