@@ -16,7 +16,8 @@
     }
     & input:focus{
         outline: none;
-        box-shadow: 0 0 5px $color-placeholder;
+        box-shadow: 0 0 5px  $color-focus;
+
     }
 }   
 
