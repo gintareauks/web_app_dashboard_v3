@@ -20,6 +20,7 @@
                          "formArea"
                          "button";
     padding: 15px 10px 30px;
+    border-bottom: 1px solid $color-placeholder;
 }
 
 .form {
@@ -69,13 +70,13 @@
     &:focus {
         outline: none;
     }
-
 }
 
 @media (min-width: $tablet) {
    .widget-container {
        padding-right: 0px;
        max-width: 90%;
+       border-bottom: none;
    }
 
     .message h3 {
