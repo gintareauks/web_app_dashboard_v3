@@ -7,7 +7,6 @@
 }
 
 .message {
-    border-right: 1px solid $color-border !important;
     & h3 {
         padding: 10px 0px 0px 10px;
         margin-bottom: 0;
@@ -79,8 +78,11 @@
        border-bottom: none;
    }
 
-    .message h3 {
-        padding-left: 30px;
+    .message {
+        border-right: 1px solid $color-border !important;    
+        & h3 {
+            padding-left: 30px;
+        }
     }
 }
 
