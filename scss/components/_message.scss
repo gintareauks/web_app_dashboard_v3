@@ -41,11 +41,18 @@
         border-color: $color-placeholder;
         border-radius: 3px;
         background-color: $color-form;
+        padding-top: 10px;
         &:focus {
             outline: none;
             box-shadow: 0 0 5px $color-focus;
         }
     }
+}
+ 
+.form-field, 
+.form-area {
+    font-size: 0.9em;
+    padding-left: 10px;
 }
 
 .button-primary {
@@ -54,7 +61,7 @@
     border: none;
     border-radius: 3px;
     height: 30px;
-    margin-top: 25px;
+    margin-top: 17.5px;
     &:hover {
         outline: none;
         box-shadow: 0 0 5px $color-nav;

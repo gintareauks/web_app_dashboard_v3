@@ -16,12 +16,14 @@
 
 .traffic {
     padding-bottom: 10px;
+    padding-top: 20px;
     &-nav {
         display: inline-block;
         list-style-type: none;
         justify-self: right;
         align-self: center;
         padding-left: 10px;
+        padding-right: 8px;
         margin-left: auto;
         &-link {
             padding-right: 5px;

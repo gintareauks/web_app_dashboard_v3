@@ -9,7 +9,7 @@ body {
 .header {
     & h1 {
     font-size: 1.4em;
-    font-weight: 300;
+    font-weight: 100;
     color: $color-text-secondary;
     }
     & h1 span {
@@ -45,7 +45,8 @@ li a,
 }
 
 .main-header input::placeholder,
-.form-field::placeholder {
+.form-field::placeholder,
+.form-area::placeholder {
     color: $color-placeholder;
 }
 
@@ -89,6 +90,12 @@ li {
 
 .members-text a {
     text-decoration: none;
+}
+
+.form-field, 
+.form-area,
+.search-input {
+    font-size: 0.9em;
 }
 
 #timezone {

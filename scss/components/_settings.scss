@@ -1,5 +1,6 @@
-/* SETTINGS */ 
-
+ /* ========================================
+                Settings
+======================================== */
 .settings {
     & h3 {
         padding: 10px 0px 0px 10px;
@@ -60,8 +61,8 @@ select {
     height: 30px;
     width: 90%;
     border: none;
-    color: white;
-    background-color: #cccccc;
+    color: $color-text-secondary;
+    background-color: $color-cancel;
     border-radius: 3px;
     &:focus {
         outline: none;
