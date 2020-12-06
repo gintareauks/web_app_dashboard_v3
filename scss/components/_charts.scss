@@ -22,12 +22,15 @@
         list-style-type: none;
         justify-self: right;
         align-self: center;
-        padding-left: 10px;
-        padding-right: 8px;
+        padding-left: 5px;
+        padding-right: 5px;
         margin-left: auto;
         &-link {
-            padding-right: 5px;
-            padding-left: 0px;
+            background-color: none;
+            border-radius: 20px;
+            padding: 5px;
+            width: 47px;
+            text-align: center;
         }
     }
     &-header {
@@ -60,10 +63,6 @@ li {
 
 .active {
     background-color: $color-active;
-    border-radius: 20px;
-    padding: 5px;
-    width: 60px;
-    text-align: center;
 }
 
 .daily {
@@ -101,7 +100,8 @@ li {
         &-nav {
             margin-right: 20px;
             &-link {
-                padding-right: 5px;
+                padding: 5px;
+                width: 60px;
             }
         }
     }
